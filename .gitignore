@@ -26,3 +26,9 @@ buildNumber.properties
 /temp/
 TODO
 /third-party/
+
+###################
+### Claude Code ###
+###################
+CLAUDE.md
+/.claude/

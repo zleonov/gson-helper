@@ -1,4 +1,4 @@
-package software.leonov.json;
+package software.leonov.util.gson;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,7 +18,6 @@ import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import software.leonov.util.gson.GsonHelper;
 
 class TestOptional {
 

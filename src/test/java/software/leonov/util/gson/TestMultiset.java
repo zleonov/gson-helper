@@ -1,4 +1,4 @@
-package software.leonov.json;
+package software.leonov.util.gson;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -18,7 +18,6 @@ import com.google.common.collect.ImmutableMultiset;
 import com.google.common.collect.Multiset;
 import com.google.gson.reflect.TypeToken;
 
-import software.leonov.util.gson.GsonHelper;
 
 class TestMultiset {
 

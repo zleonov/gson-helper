@@ -44,16 +44,17 @@ public final class OptionalTypeAdapter<E> extends TypeAdapter<Optional<E>> {
         this.adapter = (TypeAdapter<E>) gson.getAdapter(TypeToken.get(type));
     }
 
-//    /**
-//     * Writes the specified {@code Optional} value to the {@code JsonWriter}.
-//     * <p>
-//     * <b>Warning:</b> Unlike the {@code write} method in most adapters which accepts {@code null} values an
-//     * {@code Optional} value cannot itself be {@code null}.
-//     * 
-//     * @param out   the specified {@code JsonWriter}
-//     * @param value the {@code Optional} value to write
-//     * @throws NullPointerException if the {@code Optional} value itself is {@code null}
-//     */
+    /**
+     * Writes the specified {@code Optional} value to the {@code JsonWriter}.
+     * <p>
+     * <b>Warning:</b> This method slightly violates the contract of the {@code write} method by rejecting {@code null}
+     * values. This is required because the {@code Optional} instance itself cannot be {@code null}, as it would be
+     * impossible to differentiate between {@code null} and empty {@code Optional}s.
+     * 
+     * @param out   the specified {@code JsonWriter}
+     * @param value the {@code Optional} value to write
+     * @throws NullPointerException if the {@code Optional} value itself is {@code null}
+     */
     @Override
     public void write(final JsonWriter out, final Optional<E> value) throws IOException {
         checkNotNull(out, "out == null");

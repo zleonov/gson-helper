@@ -118,7 +118,7 @@ public final class TableTypeAdapter<R, C, V> extends TypeAdapter<Table<R, C, V>>
                     in.endArray();
                 } else {
                     in.beginObject();
-                    final String colKeyJson = "\"" + in.nextName() + "\"";          // row key
+                    final String colKeyJson = "\"" + in.nextName() + "\"";          // column key
                     final C      colKey     = columnKeyAdapter.fromJson(colKeyJson);
                     final V      value      = valueAdapter.read(in);
                     in.endObject();
